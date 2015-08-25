@@ -1,0 +1,6 @@
+-main Main
+-cpp obj
+-debug
+-D HXCPP_CHECK_POINTER
+-D HXCPP_GC_CHECK_POINTER
+
