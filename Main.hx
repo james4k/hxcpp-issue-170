@@ -18,7 +18,7 @@ class Main {
 #else
 
 		// override `environ` values which libstd will read
-		untyped __cpp__ ("char envMem [10240]; char *nextMem = envMem");
+		untyped __cpp__ ("char envMem [20480]; char *nextMem = envMem");
 		var fakeEnv:Array<String> = haxe.Json.parse (sys.io.File.getContent ("env.json"));
 		untyped __cpp__ ("environ = (char **)&envMem[0]; nextMem += {0}*sizeof(void *)", fakeEnv.length + 1);
 		for (i in 0...Std.int(fakeEnv.length / 2)) {
